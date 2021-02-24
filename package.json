@@ -1,0 +1,27 @@
+{
+  "name": "rlearning-test",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint lib",
+    "lint:fix": "npm run lint -- --fix",
+    "build:proto": "pbjs -t static-module -w es6 lib/storage.proto > lib/storage.js",
+    "mocha": "mocha --reporter=spec test/*-test.js",
+    "test": "npm run lint && npm run mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@indutny/maze": "^1.0.0",
+    "@tensorflow/tfjs-node": "^1.6.0",
+    "debug": "^4.1.1",
+    "yargs": "^15.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "mocha": "^7.1.0"
+  }
+}
